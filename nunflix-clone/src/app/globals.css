@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.5%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.5%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.5%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.9%;
+
+    --radius: 0.5rem;
+
+    /* Nunflix specific colors */
+    --nunflix-red: 0 72% 51%;
+    --nunflix-gold: 42 87% 55%;
+    --nunflix-green: 120 60% 44%;
+    --nunflix-blue: 210 100% 56%;
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.5%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.5%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.5%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .contentWrapper {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6;
+  }
+
+  .rating-circle {
+    @apply relative inline-flex items-center justify-center rounded-full w-10 h-10 text-sm font-semibold;
+  }
+
+  .movie-card {
+    @apply relative overflow-hidden rounded-md transition-all duration-300 hover:scale-105;
+  }
+
+  .movie-card-info {
+    @apply absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/90 to-transparent;
+  }
+
+  .genre-tag {
+    @apply inline-block text-xs px-2 py-1 rounded-sm bg-secondary mr-1 mb-1;
+  }
+
+  .menu-item {
+    @apply relative cursor-pointer text-gray-300 hover:text-white transition-colors;
+  }
+
+  .menu-items {
+    @apply flex items-center gap-6;
+  }
+
+  .footer-section {
+    @apply mb-8 lg:mb-0;
+  }
+
+  .footer-section h2 {
+    @apply text-lg font-semibold mb-4;
+  }
+
+  .footer-section ul {
+    @apply space-y-2;
+  }
+
+  .footer-section ul li a {
+    @apply text-gray-400 hover:text-white transition-colors;
+  }
+}
